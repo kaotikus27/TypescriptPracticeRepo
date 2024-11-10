@@ -1,0 +1,31 @@
+1. Title   <title>
+2. Heading <h1>
+3. input < input >
+4. button <button >
+5.Feed back <div>  <p>  Too high!  Too low! or Correct! 
+
+SYLES
+6. input and button styles
+7. feedback stylee
+
+JSCRIPT
+8.document.querySelector 
+		input , button, feedback
+9. random number
+10. number of attempt
+11.event listener to button when clicked
+12.read user gues
+13. compare
+14. if too high display too high
+15. if too low display too low
+16.if gues is correct display correct -- and congratulate the player.
+
+OPTIONAL
+17. Reset the game functionality
+18.reset button - new random number
+
+ENHANCE with addional feature
+19.limit attempts: score tracking
+
+TESTING
+20. TEST and Debug

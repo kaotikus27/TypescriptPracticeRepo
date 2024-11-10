@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main--container{
+    border: 1px solid red;
+    max-width: 1512px;
+    width: 80%; /* Set a fixed width for the body element */ 
+    margin: 50px auto; 
+    .context{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        border: 1px solid green;
+
+        .top--content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .gamebox{
+            border: 1px solid red;
+            display: flex;
+            gap: 5px;
+        }
+
+        .feedback{
+            border: 1px solid green;
+            padding: 20px;
+            margin: 10px;
+        }
+    }
+} 

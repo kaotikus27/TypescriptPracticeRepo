@@ -1,0 +1,497 @@
+$bgColor: #f4dbbf;
+$green: #5ede77;
+$red: #dd6060;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.congrats{
+  color: gold;
+  font-size: 15px;
+}
+.red{
+  color: $red;
+}
+.green{
+  color: $green;
+}
+
+.hideContent{
+  visibility: hidden;
+}
+
+.main--container {
+  // border: 1px solid red;
+  .main--content {
+    // border: 1px solid red;
+    max-width: 1512px;
+    width: 80%; /* Set a fixed width for the body element */
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    .left--container {
+      border-radius: 3px;
+      border: 4.5px solid #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $bgColor;
+      padding: 1em;
+      .difficulty--container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h1 {
+          margin: 10px 0 10px 0;
+          font-size: 22px;
+          color: #fff;
+          -webkit-text-stroke: 1px #000;
+        }
+        .dGeneral {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin: 5px 0 5px 0;
+          gap: 15px;
+          color: #fff;
+          -webkit-text-stroke: 1px #000;
+          &:hover {
+            .checkbtn {
+              background-color: $green;
+            }
+            color: $green;
+            cursor: pointer;
+          }
+        }
+        .checkbtn {
+          border: 1px solid #000;
+          width: 23px;
+          height: 18px;
+          border-radius: 3px;
+          background-color: #fff;
+          font-size: 0;
+        }
+
+
+
+        .checkbtnSelected{
+          color: $green;
+          .checkbtn {
+            background-color: $green;
+          }
+        }
+
+
+      }
+      
+      .btn--container {
+        display: flex;
+        flex-direction: column;
+       
+        .general--btn {
+          .restart{
+            color: $red;
+          }
+          button {
+            margin: 10px 0 10px 0;
+            width: 430px;
+            padding: 15px;
+            color: #fff;
+            -webkit-text-stroke: 1px #000;
+            background-color: $green;
+            border-radius: 3px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease; /* Applies ease effect to all properties */
+            cursor: pointer;
+            font-size: 16px;
+            &:hover {
+              box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
+              color: #fff;
+              cursor: pointer;
+              background-color: #fff;
+              color: $green;
+              -webkit-text-stroke: 1px #000;
+              transform: translateY(-2px);
+            }
+          }
+        }
+      }
+
+      .gameInfo--container{
+        border: 2px solid #000;
+        border-radius: 3px;
+        background-color: #fff;
+        padding: 10px;
+        margin: 10px 0 20px 0;
+        .context{
+            padding: 5px;
+            .iGeneral{
+                display: flex;
+                align-content: space-between;
+                gap: 10px;
+                p{
+                    font-size: 13px;
+                    font-weight:normal;
+                    line-height: 35px;
+                }
+            }
+        }
+      }
+
+      .instruction--container{
+        border: 2px solid #000;
+        background-color: #fff;
+        border-radius: 3px;
+        .instruction--context{
+            padding: 1em;
+            height: 45vh;
+            
+           
+            h1{
+              font-size: 25px;
+              
+            }
+            p{
+              font-size: 16px;
+              line-height: 25px;
+              text-align: justify;
+            }
+        }
+      }
+    }
+
+    .right--container {
+      border-radius: 3px;
+      border: 4.5px solid #000;
+      display: flex;
+      flex-direction: column;
+      background-color: $bgColor;
+      padding: 1em;
+
+      .context{
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        
+        .mechanics--container{
+          display: flex;
+          align-self: flex-end;
+          padding: 1em;
+          .setting--icon{
+            button{
+              background-color: none;
+              border: none;
+              background: none;
+              &:hover{
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .gamepad--container{
+          padding: 5em;
+          // border: 1px solid green;
+          .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            h1{
+              align-self: center;
+              font-size:25px;
+              color: $green;
+              letter-spacing: 12px;
+              padding: 15px;
+              -webkit-text-stroke: 1px #000;
+            }
+            input{
+              padding: 2em;
+              border: 2px solid #000;
+            }
+            .notAllowed{
+              cursor: not-allowed;
+              &:hover{
+                cursor: not-allowed;
+              }
+          }
+          .restart{
+            color: #fff;
+            background-color: $red;
+            margin-top: -20px;
+            &:hover{
+              color: $red;
+            }
+          }
+            button{
+            margin: 10px 0 10px 0;
+            padding: 15px;
+            color: #fff;
+            -webkit-text-stroke: 1px #000;
+            background-color: $green;
+            border-radius: 3px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease; /* Applies ease effect to all properties */
+            cursor: pointer;
+            font-size: 16px;
+            &:hover {
+              box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
+              color: #fff;
+              cursor: pointer;
+              background-color: #fff;
+              color: $green;
+              -webkit-text-stroke: 1px #000;
+              transform: translateY(-2px);
+            }
+            }
+          }
+        }
+        .feedback--container{
+          // border: 1px solid red;
+          display: grid;
+          grid-template-columns: 2fr 2fr;
+         justify-content: center;
+          padding: 35px;
+          gap: 15px;
+          
+          .content{
+           h1{
+            font-size: 1em;
+           }
+           .guessed--container{
+            
+            font-size: 15px;
+            p{
+              line-height: 35px;
+            }
+           }
+          }
+
+          .display--container{
+            align-items: center;
+            text-align:justify;
+            line-height: 30px;
+            width: 14rem;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+
+@keyframes confetti-slow {
+  0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
+  
+  100% { transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg); }
+}
+
+@keyframes confetti-medium {
+  0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
+  
+  100% { transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg); }
+}
+
+@keyframes confetti-fast {
+  0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
+  
+  100% { transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg); }
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  border:1px solid white;
+  display:fixed;
+  top:0px;
+}
+
+.confetti-container {
+  perspective: 700px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.confetti {
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  border-radius: 0%;
+
+  &--animation-slow {
+    animation: confetti-slow 2.25s linear 1 forwards;
+  }
+  
+  &--animation-medium {
+    animation: confetti-medium 1.75s linear 1 forwards;
+  }
+  
+  &--animation-fast {
+    animation: confetti-fast 1.25s linear 1 forwards;
+  }
+}
+
+
+
+
+
+/* Checkmark */
+.checkmark-circle {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: auto;
+  margin-right: auto;
+}
+.checkmark-circle .background {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #00C09D;
+  position: absolute;
+}
+.checkmark-circle .checkmark {
+  border-radius: 5px;
+}
+.checkmark-circle .checkmark.draw:after {
+  -webkit-animation-delay: 100ms;
+  -moz-animation-delay: 100ms;
+  animation-delay: 100ms;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-name: checkmark;
+  -moz-animation-name: checkmark;
+  animation-name: checkmark;
+  -webkit-transform: scaleX(-1) rotate(135deg);
+  -moz-transform: scaleX(-1) rotate(135deg);
+  -ms-transform: scaleX(-1) rotate(135deg);
+  -o-transform: scaleX(-1) rotate(135deg);
+  transform: scaleX(-1) rotate(135deg);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.checkmark-circle .checkmark:after {
+  opacity: 1;
+  height: 75px;
+  width: 37.5px;
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
+  border-right: 15px solid white;
+  border-top: 15px solid white;
+  border-radius: 2.5px !important;
+  content: '';
+  left: 25px;
+  top: 75px;
+  position: absolute;
+}
+
+@-webkit-keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 37.5px;
+    opacity: 1;
+  }
+  40% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+  100% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+}
+@-moz-keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 37.5px;
+    opacity: 1;
+  }
+  40% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+  100% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+}
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 37.5px;
+    opacity: 1;
+  }
+  40% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+  100% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+}
+
+
+
+.submit-btn {
+    height: 45px;
+    width: 200px;
+    font-size: 15px;
+    background-color: #00c09d;
+    border: 1px solid #00ab8c;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(87,71,81,.2);
+    cursor: pointer;
+    transition: all 2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.submit-btn:hover {
+    background-color: #2ca893;
+    transition: all .2s ease-out;
+}

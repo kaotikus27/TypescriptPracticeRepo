@@ -1,0 +1,398 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.congrats {
+  color: gold;
+  font-size: 15px;
+}
+
+.red {
+  color: #dd6060;
+}
+
+.green {
+  color: #5ede77;
+}
+
+.hideContent {
+  visibility: hidden;
+}
+
+.main--container .main--content {
+  max-width: 1512px;
+  width: 80%; /* Set a fixed width for the body element */
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.main--container .main--content .left--container {
+  border-radius: 3px;
+  border: 4.5px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f4dbbf;
+  padding: 1em;
+}
+.main--container .main--content .left--container .difficulty--container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.main--container .main--content .left--container .difficulty--container h1 {
+  margin: 10px 0 10px 0;
+  font-size: 22px;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+}
+.main--container .main--content .left--container .difficulty--container .dGeneral {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0 5px 0;
+  gap: 15px;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+}
+.main--container .main--content .left--container .difficulty--container .dGeneral:hover {
+  color: #5ede77;
+  cursor: pointer;
+}
+.main--container .main--content .left--container .difficulty--container .dGeneral:hover .checkbtn {
+  background-color: #5ede77;
+}
+.main--container .main--content .left--container .difficulty--container .checkbtn {
+  border: 1px solid #000;
+  width: 23px;
+  height: 18px;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 0;
+}
+.main--container .main--content .left--container .difficulty--container .checkbtnSelected {
+  color: #5ede77;
+}
+.main--container .main--content .left--container .difficulty--container .checkbtnSelected .checkbtn {
+  background-color: #5ede77;
+}
+.main--container .main--content .left--container .btn--container {
+  display: flex;
+  flex-direction: column;
+}
+.main--container .main--content .left--container .btn--container .general--btn .restart {
+  color: #dd6060;
+}
+.main--container .main--content .left--container .btn--container .general--btn button {
+  margin: 10px 0 10px 0;
+  width: 430px;
+  padding: 15px;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+  background-color: #5ede77;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease; /* Applies ease effect to all properties */
+  cursor: pointer;
+  font-size: 16px;
+}
+.main--container .main--content .left--container .btn--container .general--btn button:hover {
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+  background-color: #fff;
+  color: #5ede77;
+  -webkit-text-stroke: 1px #000;
+  transform: translateY(-2px);
+}
+.main--container .main--content .left--container .gameInfo--container {
+  border: 2px solid #000;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+}
+.main--container .main--content .left--container .gameInfo--container .context {
+  padding: 5px;
+}
+.main--container .main--content .left--container .gameInfo--container .context .iGeneral {
+  display: flex;
+  align-content: space-between;
+  gap: 10px;
+}
+.main--container .main--content .left--container .gameInfo--container .context .iGeneral p {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 35px;
+}
+.main--container .main--content .left--container .instruction--container {
+  border: 2px solid #000;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.main--container .main--content .left--container .instruction--container .instruction--context {
+  padding: 1em;
+  height: 45vh;
+}
+.main--container .main--content .left--container .instruction--container .instruction--context h1 {
+  font-size: 25px;
+}
+.main--container .main--content .left--container .instruction--container .instruction--context p {
+  font-size: 16px;
+  line-height: 25px;
+  text-align: justify;
+}
+.main--container .main--content .right--container {
+  border-radius: 3px;
+  border: 4.5px solid #000;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4dbbf;
+  padding: 1em;
+}
+.main--container .main--content .right--container .context {
+  display: flex;
+  flex-direction: column;
+}
+.main--container .main--content .right--container .context .mechanics--container {
+  display: flex;
+  align-self: flex-end;
+  padding: 1em;
+}
+.main--container .main--content .right--container .context .mechanics--container .setting--icon button {
+  background-color: none;
+  border: none;
+  background: none;
+}
+.main--container .main--content .right--container .context .mechanics--container .setting--icon button:hover {
+  cursor: pointer;
+}
+.main--container .main--content .right--container .context .gamepad--container {
+  padding: 5em;
+}
+.main--container .main--content .right--container .context .gamepad--container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.main--container .main--content .right--container .context .gamepad--container .content h1 {
+  align-self: center;
+  font-size: 25px;
+  color: #5ede77;
+  letter-spacing: 12px;
+  padding: 15px;
+  -webkit-text-stroke: 1px #000;
+}
+.main--container .main--content .right--container .context .gamepad--container .content input {
+  padding: 2em;
+  border: 2px solid #000;
+}
+.main--container .main--content .right--container .context .gamepad--container .content .notAllowed {
+  cursor: not-allowed;
+}
+.main--container .main--content .right--container .context .gamepad--container .content .notAllowed:hover {
+  cursor: not-allowed;
+}
+.main--container .main--content .right--container .context .gamepad--container .content .restart {
+  color: #fff;
+  background-color: #dd6060;
+  margin-top: -20px;
+}
+.main--container .main--content .right--container .context .gamepad--container .content .restart:hover {
+  color: #dd6060;
+}
+.main--container .main--content .right--container .context .gamepad--container .content button {
+  margin: 10px 0 10px 0;
+  padding: 15px;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+  background-color: #5ede77;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease; /* Applies ease effect to all properties */
+  cursor: pointer;
+  font-size: 16px;
+}
+.main--container .main--content .right--container .context .gamepad--container .content button:hover {
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+  background-color: #fff;
+  color: #5ede77;
+  -webkit-text-stroke: 1px #000;
+  transform: translateY(-2px);
+}
+.main--container .main--content .right--container .context .feedback--container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  justify-content: center;
+  padding: 35px;
+  gap: 15px;
+}
+.main--container .main--content .right--container .context .feedback--container .content h1 {
+  font-size: 1em;
+}
+.main--container .main--content .right--container .context .feedback--container .content .guessed--container {
+  font-size: 15px;
+}
+.main--container .main--content .right--container .context .feedback--container .content .guessed--container p {
+  line-height: 35px;
+}
+.main--container .main--content .right--container .context .feedback--container .display--container {
+  align-items: center;
+  text-align: justify;
+  line-height: 30px;
+  width: 14rem;
+}
+
+@keyframes confetti-slow {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg);
+  }
+}
+@keyframes confetti-medium {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg);
+  }
+}
+@keyframes confetti-fast {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg);
+  }
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  border: 1px solid white;
+  display: fixed;
+  top: 0px;
+}
+
+.confetti-container {
+  perspective: 700px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.confetti {
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  border-radius: 0%;
+}
+.confetti--animation-slow {
+  animation: confetti-slow 2.25s linear 1 forwards;
+}
+.confetti--animation-medium {
+  animation: confetti-medium 1.75s linear 1 forwards;
+}
+.confetti--animation-fast {
+  animation: confetti-fast 1.25s linear 1 forwards;
+}
+
+/* Checkmark */
+.checkmark-circle {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkmark-circle .background {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #00C09D;
+  position: absolute;
+}
+
+.checkmark-circle .checkmark {
+  border-radius: 5px;
+}
+
+.checkmark-circle .checkmark.draw:after {
+  animation-delay: 100ms;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-name: checkmark;
+  transform: scaleX(-1) rotate(135deg);
+  animation-fill-mode: forwards;
+}
+
+.checkmark-circle .checkmark:after {
+  opacity: 1;
+  height: 75px;
+  width: 37.5px;
+  transform-origin: left top;
+  border-right: 15px solid white;
+  border-top: 15px solid white;
+  border-radius: 2.5px !important;
+  content: "";
+  left: 25px;
+  top: 75px;
+  position: absolute;
+}
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 37.5px;
+    opacity: 1;
+  }
+  40% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+  100% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+}
+.submit-btn {
+  height: 45px;
+  width: 200px;
+  font-size: 15px;
+  background-color: #00c09d;
+  border: 1px solid #00ab8c;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(87, 71, 81, 0.2);
+  cursor: pointer;
+  transition: all 2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.submit-btn:hover {
+  background-color: #2ca893;
+  transition: all 0.2s ease-out;
+}/*# sourceMappingURL=styles.css.map */
